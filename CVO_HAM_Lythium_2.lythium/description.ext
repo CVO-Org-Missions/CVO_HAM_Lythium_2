@@ -8,17 +8,17 @@ class Header
 	maxPlayers = 20;	// maximum number of players the mission supports
 };
 
-author = "Someone [CVO]";
+author = "Giallustio - Adapted by Zorn [CVO] and ComboTombo [CVO]";
 
-onLoadName = "CVO Mission Title";                       // Loading Screen: Mission Title
-onLoadMission = "If you walk alone, you die alone";     // Loading Screen: Mission Description, short
+onLoadName = "CVO Hearts and Minds Lythium v2";                       // Loading Screen: Mission Title
+onLoadMission = "Time to earn your pay.";     // Loading Screen: Mission Description, short
 
 loadScreen = "data\loadScreen_cvo_default.paa";
 
 overviewPicture = "data\loadScreen_cvo_default.paa"; // The picture displayed in the mission selection screen
 
-briefingName = "Operation Some Thing"; // The Mission name with operation displayed in the mission selection men
-overviewText = "Description of the mission here"; // The text above the picture in the mission selection menu
+briefingName = "CVO Hearts and Minds Lythium v2"; // The Mission name with operation displayed in the mission selection men
+overviewText = "Counter-insurgency patrols and operations in the arid mountains of Lythium."; // The text above the picture in the mission selection menu
 
 
 // ###### Common Multiplayer Stuff
