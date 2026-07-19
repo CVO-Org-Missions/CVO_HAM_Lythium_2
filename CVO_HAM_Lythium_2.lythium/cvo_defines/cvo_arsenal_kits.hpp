@@ -1,10 +1,10 @@
 /*
-*   CVO Arsenal Define File
-*   https://github.com/CVO-Org/CVO-Auxiliary/blob/main/addons/arsenal/readme.md
-*   Example File: https://github.com/CVO-Org/CVO-Auxiliary/blob/main/.hemtt/missions/Arsenal.Altis/cvo_arsenal_kits.hpp
+*   MUM Arsenal Define File
+*   Example File:  https://github.com/CVO-Org/Zorns-Mission-Utility-Mod/blob/main/.hemtt/missions/arsenal.VR/mum_arsenal.hpp (this file)
+*   Documentation: https://github.com/CVO-Org/Zorns-Mission-Utility-Mod/blob/main/addons/arsenal/readme.md
 */
 
-class cvo_arsenal_kits
+class mum_arsenal_kits
 {
     editor_layer_name = "cvo_arsenal_boxes";
     object_variable_names[] = {"source"};
