@@ -5,7 +5,7 @@ class Header
 {
 	gameType = "Coop";	// game type
 	minPlayers =  1;	// minimum number of players the mission supports
-	maxPlayers = 20;	// maximum number of players the mission supports
+	maxPlayers = 32;	// maximum number of players the mission supports
 };
 
 author = "Giallustio - Adapted by Zorn [CVO] and ComboTombo [CVO]";
@@ -37,9 +37,9 @@ cba_settings_hasSettingsFile = 1;
 disableChannels[] =
 {
 	// Ch.ID, Disable Text, Disable Voice, Disable Map Markers, Disable Draw on Map
-	{ 0, true, true, false, false }, // Global
-	{ 1, true, true, false, false }, // Side
-	{ 2, true, true, false, false }, // Command
+	{ 0, true,  true, false, false }, // Global
+	{ 1, true,  true, false, false }, // Side
+	{ 2, true,  true, false, false }, // Command
 	{ 3, false, true, false, false }, // Group
 	{ 4, false, true, false, false }, // Vehicle
 	{ 5, false, true, false, false }  // Direct
@@ -48,7 +48,7 @@ disableChannels[] =
 
 // ###### AI Stuff 
 aiKills = 0; // Does not add AI to the scoreboard
-disabledAI = 1;
+disabledAI = 1; // remove playerslot-ai
 
 
 // ###### Respawn Settings - CVO Defaults

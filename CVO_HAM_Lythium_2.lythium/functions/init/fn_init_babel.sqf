@@ -33,27 +33,27 @@ if (true) exitWith {};
 // ["Language ID", "Language DisplayName"]
 // https://acre2.idi-systems.com/wiki/frameworks/functions-list#acre_api_fnc_babeladdlanguagetype
 cvo_babel_allLanguages = [
-    ["viet", "Vietnamese"],
-    ["en", "English"]
+    ["afgh", "Afghan"],
+    ["ru", "Russian"]
 ];
 
 // Assign Default Language to Side
 cvo_babel_sideLanguages = createHashMapFromArray [
-    ["WEST", ["en"]],
-    ["EAST", ["viet"]],
-    ["GUER", ["viet"]],
-    ["CIV", ["viet"]]
+    ["WEST", ["ru"]],
+    ["EAST", ["afgh"]],
+    ["GUER", ["afgh"]],
+    ["CIV", ["afgh"]]
 ];
 
 // Language all players can speak, no matter what.
-cvo_babel_playerDefault = "en";
+cvo_babel_playerDefault = "ru";
 
 // Interpreter Stuff
 // How to define Interpreter:
 // this setVariable ["interpreter", true];
 
 // Languages to be used by the interpreter:
-cvo_babel_interpreterLanguages = ["viet"];
+cvo_babel_interpreterLanguages = ["afgh"];
 
 
 // UNCON FEATURE
