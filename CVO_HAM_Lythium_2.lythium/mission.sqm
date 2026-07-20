@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12350.872,521.39532,17236.135};
-		dir[]={-0.5786159,-0.73884004,0.34575692};
-		up[]={-0.63429177,0.67380852,0.37902811};
-		aside[]={0.5130204,2.5472327e-06,0.85851669};
+		pos[]={12290.072,421.90656,17279.553};
+		dir[]={-0.68486655,-0.72139084,0.10392213};
+		up[]={-0.71330893,0.69246387,0.10824008};
+		aside[]={0.15004677,2.7189344e-06,0.98880726};
 	};
 };
 binarizationWanted=0;
@@ -63335,11 +63335,24 @@ class Mission
 								class data
 								{
 									singleType="BOOL";
-									value=1;
+									value=0;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="Drawer_6_Move";
+							expression="_this animate ['Drawer_6_move_source',_value,true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.1;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item29
