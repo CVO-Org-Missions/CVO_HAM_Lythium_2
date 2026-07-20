@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2985;
+		nextID=3285;
 	};
 	class Camera
 	{
-		pos[]={12172.615,364.19482,17282.473};
-		dir[]={0.30585295,-0.90451789,-0.29715541};
-		up[]={0.64874852,0.42643574,-0.63029999};
-		aside[]={-0.69683528,2.9802322e-08,-0.71723127};
+		pos[]={12265.326,437.86899,17247.48};
+		dir[]={-0.46049407,-0.792346,0.40016618};
+		up[]={-0.59807801,0.61007196,0.51972568};
+		aside[]={0.65593272,0,0.75481927};
 	};
 };
 binarizationWanted=0;
@@ -766,6 +766,13 @@ randomSeed=6826011;
 class ScenarioData
 {
 	author="Pulsar Neutron Star";
+	disabledAI=1;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=20;
+	};
 };
 class CustomAttributes
 {
@@ -3136,6 +3143,48 @@ class CustomAttributes
 		nAttributes=1;
 	};
 	class Category1
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_dynamicGroups";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		nAttributes=2;
+	};
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -22184,6 +22233,19 @@ class Mission
 								};
 								class Attribute2
 								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
 									property="speaker";
 									expression="_this setspeaker _value;";
 									class Value
@@ -22195,7 +22257,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute3
+								class Attribute4
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -22208,7 +22270,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute4
+								class Attribute5
 								{
 									property="acre_sys_radio_edenSetup";
 									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
@@ -22221,7 +22283,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=5;
+								nAttributes=6;
 							};
 						};
 						class Item1
@@ -22372,6 +22434,19 @@ class Mission
 								};
 								class Attribute2
 								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
 									property="speaker";
 									expression="_this setspeaker _value;";
 									class Value
@@ -22383,7 +22458,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute3
+								class Attribute4
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -22396,7 +22471,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute4
+								class Attribute5
 								{
 									property="acre_sys_radio_edenSetup";
 									expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
@@ -22409,7 +22484,7 @@ class Mission
 										};
 									};
 								};
-								nAttributes=5;
+								nAttributes=6;
 							};
 						};
 						class Item2
@@ -44002,7 +44077,6 @@ class Mission
 						angles[]={0,3.6573486,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						skill=0.35000002;
@@ -44011,6 +44085,7 @@ class Mission
 					};
 					id=3299;
 					type="Land_BottlePlastic_V2_F";
+					atlOffset=0.13265991;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44038,7 +44113,6 @@ class Mission
 						angles[]={0,3.5896885,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						skill=0.35000002;
@@ -44047,6 +44121,7 @@ class Mission
 					};
 					id=3300;
 					type="Land_BottlePlastic_V2_F";
+					atlOffset=0.13265991;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -59167,6 +59242,7 @@ class Mission
 					};
 					id=1491;
 					type="Land_Canteen_F";
+					atlOffset=0.13244629;
 					class CustomAttributes
 					{
 						class Attribute0
