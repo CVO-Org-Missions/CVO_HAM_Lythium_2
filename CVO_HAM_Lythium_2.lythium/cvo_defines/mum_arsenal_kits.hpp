@@ -294,7 +294,7 @@ class mum_arsenal_kits
 			class UK3CB_Enfield_Rail {};
 			class UK3CB_Enfield_10rnd_Mag {};
 			class UK3CB_Enfield_10rnd_Mag_YT {};
-			/*Fancy weapons
+			/*Special
 			class rhs_weap_ak74m_zenitco01 {};
 			class rhs_weap_ak104_zenitco01 {};
 			class rhs_weap_ak103_zenitco01 {};
@@ -303,10 +303,6 @@ class mum_arsenal_kits
 			class rhs_30Rnd_545x39_7N22_plum_AK {};
 			class rhs_30Rnd_545x39_7N22_desert_AK {};
 			class rhs_30Rnd_545x39_7N22_camo_AK {};
-			class rhs_weap_asval {};
-			class rhs_weap_vss {};
-			class rhs_weap_pkp {};
-			class rhs_100Rnd_762x54mmR_7BZ3 {};
 			*/
         };
     };
@@ -354,16 +350,13 @@ class mum_arsenal_kits
 			class rhs_acc_okp7_dovetail {};
 			class rhs_acc_ekp8_02 {};
 			class rhs_acc_pkas {};
-			/* Fancy accessories
+			/*Special
 			class rhs_acc_grip_rk6 {};
 			class rhs_acc_grip_rk2 {};
 			class rhs_acc_grip_ffg2 {};
 			class rhs_acc_perst1ik_ris {};
-			class rhs_weap_asval_grip {};
 			class rhs_acc_perst3_2dp_light_h {};
 			class rhs_acc_perst3_2dp_h {};
-			class rhs_weap_vss_grip {};
-			class rhs_acc_pso1m21 {};
 			*/
         };
     };
@@ -436,7 +429,10 @@ class mum_arsenal_kits
 			class rhs_weap_pkm {};
 			class rhs_100Rnd_762x54mmR {};
 			class rhs_100Rnd_762x54mmR_green {};
-			
+			/*Special
+            class rhs_weap_pkp {};
+			class rhs_100Rnd_762x54mmR_7BZ3 {};
+            */
         };
     };
 
@@ -449,6 +445,25 @@ class mum_arsenal_kits
 			class rhs_rpg7_PG7V_mag {};
 			class rhs_rpg7_OG7V_mag {};
 
+        };
+    };
+
+    class Grenadier: baseKit {
+        role = "Grenadier";
+        class items {
+            class rhs_weap_ak74m_gp25 {};
+            class rhs_weap_ak74m_fullplum_gp25 {};
+            class rhs_weap_aks74_gp25 {};
+            class rhs_weap_aks74n_gp25 {};
+            class rhs_weap_ak103_gp25 {};
+            class rhs_weap_akm_gp25 {};
+            class rhs_weap_akms_gp25 {};
+            class rhs_VOG25 {};
+            class rhs_VOG25P {};
+            class rhs_GRD40_White {};
+            class rhs_GDM40 {};
+            class rhs_VG40OP_white {};
+            class rhs_VG40MD {};
         };
     };
 
@@ -476,6 +491,13 @@ class mum_arsenal_kits
 			//Utility
 			class ACE_Tripod {};
 			class ACE_RangeCard {};
+            /*Special 
+            class rhs_weap_asval {};
+            class rhs_weap_vss {};
+			class rhs_weap_vss_grip {};
+			class rhs_acc_pso1m21 {};
+			class rhs_weap_asval_grip {};
+            */
         };
     };
 
