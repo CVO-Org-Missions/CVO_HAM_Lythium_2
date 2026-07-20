@@ -10,7 +10,7 @@ class mum_arsenal_kits
     object_variable_names[] = {"source"};
 
     // Imports Base from configFile
-    import baseKit from cvo_arsenal_kits;
+    import baseKit from mum_arsenal_kits;
 
     //  MISCELLANEOUS
     class NVGs: baseKit {
