@@ -22,7 +22,7 @@ overviewText = "Counter-insurgency patrols and operations in the arid mountains 
 
 
 // ###### Common Multiplayer Stuff
-skipLobby = 1; // 0: disabled - 1: enabled. Default: 0
+skipLobby = 0; // 0: disabled - 1: enabled. Default: 0
 
 // ###### Default Stuff - Dont Touch unless really needed
 allowProfileGlasses = 1;
@@ -39,10 +39,10 @@ disableChannels[] =
 	// Ch.ID, Disable Text, Disable Voice, Disable Map Markers, Disable Draw on Map
 	{ 0, true, true, false, false }, // Global
 	{ 1, true, true, false, false }, // Side
-	{ 1, true, true, false, false }, // Command
-	{ 1, false, true, false, false }, // Group
-	{ 1, false, true, false, false }, // Vehicle
-	{ 1, false, true, false, false }  // Direct
+	{ 2, true, true, false, false }, // Command
+	{ 3, false, true, false, false }, // Group
+	{ 4, false, true, false, false }, // Vehicle
+	{ 5, false, true, false, false }  // Direct
 };
 
 
@@ -85,7 +85,7 @@ respawnButton = 0; // Enables the respawn button in the ESC menu
 
 
 // ###### CVO Defines
-#include "cvo_defines\cvo_arsenal_kits.hpp"
+#include "cvo_defines\mum_arsenal_kits.hpp"
 #include "cvo_defines\cvo_csc_presets.hpp"
 
 // ###### Other Includes
