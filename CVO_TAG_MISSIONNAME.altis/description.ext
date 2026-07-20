@@ -85,7 +85,7 @@ respawnButton = 0; // Enables the respawn button in the ESC menu
 
 
 // ###### CVO Defines
-#include "cvo_defines\cvo_arsenal_kits.hpp"
+#include "cvo_defines\mum_arsenal_kits.hpp"
 #include "cvo_defines\cvo_csc_presets.hpp"
 
 // ###### Other Includes
