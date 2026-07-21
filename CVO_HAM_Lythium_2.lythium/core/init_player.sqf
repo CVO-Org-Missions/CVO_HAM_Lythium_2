@@ -19,27 +19,11 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 
     [player] call btc_eh_fnc_player;
 
-    private _arsenal_trait = player call btc_arsenal_fnc_trait;
-    if (btc_p_arsenal_Restrict isEqualTo 3) then {
-        [_arsenal_trait select 1] call btc_arsenal_fnc_weaponsFilter;
-    };
-
     btc_fob_timeout = btc_fob_timeout + CBA_missionTime;
     [] call btc_int_fnc_add_actions;
 
     if (player getVariable ["interpreter", false]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG", '\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa'];
-    };
-
-    switch (btc_p_autoloadout) do {
-        case 1: {
-            player setUnitLoadout ([_arsenal_trait select 0] call btc_arsenal_fnc_loadout);
-        };
-        case 2: {
-            removeAllWeapons player;
-        };
-        default {
-        };
     };
 
     [] call btc_respawn_fnc_screen;

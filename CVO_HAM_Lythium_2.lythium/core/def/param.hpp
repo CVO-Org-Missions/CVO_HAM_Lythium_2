@@ -22,7 +22,7 @@ class Params {
         values[]={0,1};
         texts[]={$STR_DISABLED,$STR_ENABLED};
         default = 0;
-    };    
+    };
     class btc_p_change_weather { // Enable change weather for officer on the arsenal box
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_CHANGE_WEATHER_ENABLEARSENAL"]);
         values[]={0,1};
@@ -130,12 +130,6 @@ class Params {
         values[]={-1,0,5,10,30,60};
         texts[]={$STR_DISABLED,"0 min","5 min","10 min","30 min","60 min"};
         default = 10;
-    };
-    class btc_p_respawn_arsenal { // ACE Arsenal available on respawn after been killed:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_ENABLEARSENAL"]);
-        values[]={0,1};
-        texts[]={$STR_DISABLED,$STR_ENABLED};
-        default = 1;
     };
     class btc_p_slot_isShare { // Each slot is share between players
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SLOT_ISSHARE"]);
@@ -423,36 +417,6 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM"]);
         values[] = {0,1,2,3,4};
         texts[] = {$STR_DISABLED,1,2,3,4};
-        default = 0;
-    };
-    class btc_p_arsenal_title { // << Arsenal options >>
-        title = $STR_BTC_HAM_PARAM_ARSENAL_TITLE;
-        values[]={0};
-        texts[]={""};
-        default = 0;
-    };
-    class btc_p_arsenal_Type { // Type of the arsenal:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE"]);
-        values[]={0,1,2,3,4};
-        texts[]={$STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE_BIS,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE_BA,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE_BA_PLUS,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE_ACE,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALTYPE_ACE_PLUS}; //texts[]={"BIS - Vanilla","BIS - Vanilla and ACE 3","BIS - Vanilla and ACE 3 (scroll wheel action)","ACE 3","ACE 3 (scroll wheel action)"};
-        default = 4;
-    };
-    class btc_p_arsenal_Restrict { // Restricted arsenal (See /define_mod.sqf):
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR"]);
-        values[]={0,1,2,3};
-        texts[] = {$STR_DISABLED,$STR_3DEN_ATTRIBUTES_SPEEDMODE_FULL,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR_REMOVEONLY,$STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR_FILTER}; //texts[]={"Off","Full","Remove only (works only with ACE3-Arsenal)","Filter on player role (works only with ACE3-Arsenal)"};
-        default = 3;
-    };
-    class btc_p_autoloadout { // loadout:
-        title = __EVAL(format ["      %1:", localize "STR_ACE_Interaction_Equipment"]);
-        values[]={0,1,2};
-        texts[]={$STR_DISABLED,$STR_BTC_HAM_PARAM_ARSENAL_AUTOLOADOUT, $STR_BTC_HAM_PARAM_ARSENAL_RMVWEAPONS};
-        default = 1;
-    };
-    class btc_p_garage { // Activate garage for admin:
-        title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_ARSENAL_GARAGEADMIN"]);
-        values[]={0,1};
-        texts[]={$STR_DISABLED,$STR_ENABLED};
         default = 0;
     };
     class btc_p_main_title { // << Other options >>

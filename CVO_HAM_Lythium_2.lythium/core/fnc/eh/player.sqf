@@ -91,13 +91,6 @@ if (btc_p_spect) then {
     }] call CBA_fnc_addPlayerEventHandler;
 };
 
-if (btc_p_respawn_arsenal) then {
-    [_player, "Respawn", {
-        params ["_unit", "_corpse"];
-        if (isObjectHidden _corpse) exitWith {};
-        [btc_gear_object, _unit] call ace_arsenal_fnc_openBox;
-    }] call CBA_fnc_addBISEventHandler;
-};
 
 if (btc_p_respawn_location >= 4) then {
     ["ace_killed", {
@@ -135,9 +128,9 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 ["ace_marker_flags_placed", {
     params ["_unit", "_flag"];
     _flag remoteExecCall ["btc_log_fnc_init", 2];
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;
 
 ["ace_flags_placed", {
     params ["_player", "_flag", "_item"];
     _flag remoteExecCall ["btc_log_fnc_init", 2];
-}] call CBA_fnc_addEventHandler; 
+}] call CBA_fnc_addEventHandler;

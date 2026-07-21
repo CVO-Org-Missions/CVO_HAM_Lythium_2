@@ -68,16 +68,6 @@ _action = ["Search_intel", localize "STR_A3_Showcase_Marksman_BIS_tskIntel_title
         _params call btc_log_fnc_rearmSource
     }, {true}, {}, [_helipad], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
     [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
-    _action = ["Require_veh", localize "STR_BTC_HAM_ACTION_LOGPOINT_REQVEH", "\A3\ui_f\data\map\vehicleicons\iconCar_ca.paa", {
-        params ["", "", "_params"];
-        _params spawn btc_arsenal_fnc_garage
-    }, {(serverCommandAvailable "#logout" || !isMultiplayer) and btc_p_garage}, {}, [_helipad], [0, 0, 0], 5] call ace_interact_menu_fnc_createAction;
-    [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
-    _action = ["Require_delete", localize "STR_3DEN_Delete", "\z\ace\addons\arsenal\data\iconClearContainer.paa", {
-        params ["", "", "_params"];
-        _params call btc_log_fnc_delete
-    }, {true}, {}, [_helipad], [0, 0, 0.4], 5] call ace_interact_menu_fnc_createAction;
-    [_object, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToObject;
 
     //Tool
     _action = ["Tool", localize "str_3den_display3den_menubar_tools_text", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\T_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
@@ -200,25 +190,11 @@ if (btc_p_respawn_fromOutsideBase > 4) then {
     [player, false, btc_p_respawn_fromOutsideTimeout >= 1, 1, ["ACE_SelfActions"]] call btc_fob_fnc_addInteraction;
 };
 
-//Arsenal
-//BIS
-if (btc_p_arsenal_Type < 3) then {
-    btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_BIS", "['Open', [btc_p_arsenal_Restrict isNotEqualTo 1, _this select 0]] call bis_fnc_arsenal;"];
-};
-//ACE
-if (btc_p_arsenal_Type > 0) then {
-    [btc_gear_object, btc_p_arsenal_Restrict isNotEqualTo 1, false] call ace_arsenal_fnc_initBox;
-    if (btc_p_arsenal_Type in [2, 4]) then {
-        btc_gear_object addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object, player] call ace_arsenal_fnc_openBox;"];
-    };
-};
-if (btc_p_arsenal_Restrict isNotEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_arsenal_fnc_data;};
-
 //Door
 _action = ["door_break", localize "STR_BTC_HAM_ACTION_DOOR_BREAK", "\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa", {
     [btc_door_fnc_break] call CBA_fnc_execNextFrame;
 }, {
-    (((player call ace_common_fnc_uniqueItems) arrayIntersect ace_logistics_wirecutter_possibleWirecutters) isNotEqualTo []) || {getNumber ((configOf (backpackContainer player)) >> "ace_logistics_wirecutter_hasWirecutter") == 1} || 
+    (((player call ace_common_fnc_uniqueItems) arrayIntersect ace_logistics_wirecutter_possibleWirecutters) isNotEqualTo []) || {getNumber ((configOf (backpackContainer player)) >> "ace_logistics_wirecutter_hasWirecutter") == 1} ||
     {getNumber (configFile >> "CfgWeapons" >> (vest player) >> "ace_logistics_wirecutter_hasWirecutter") == 1}
 }] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToObject;

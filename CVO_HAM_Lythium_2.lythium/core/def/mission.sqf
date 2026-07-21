@@ -27,7 +27,6 @@ btc_p_respawn_location = "btc_p_respawn_location" call BIS_fnc_getParamValue;
 btc_p_respawn_fromOutsideBase = "btc_p_respawn_fromOutsideBase" call BIS_fnc_getParamValue;
 btc_p_respawn_fromOutsideTimeout = "btc_p_respawn_fromOutsideTimeout" call BIS_fnc_getParamValue;
 btc_p_rallypointTimer = "btc_p_rallypointTimer" call BIS_fnc_getParamValue;
-btc_p_respawn_arsenal = ("btc_p_respawn_arsenal" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_respawn_ticketsAtStart = "btc_p_respawn_ticketsAtStart" call BIS_fnc_getParamValue;
 btc_p_respawn_ticketsLost = 1 - ("btc_p_respawn_ticketsLost" call BIS_fnc_getParamValue);
 btc_p_respawn_ticketsShare = ("btc_p_respawn_ticketsShare" call BIS_fnc_getParamValue) isEqualTo 0;
@@ -88,12 +87,6 @@ btc_p_chem_sides = ("btc_p_chem_sides" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_chem_cache_probability = ("btc_p_chem_cache_probability" call BIS_fnc_getParamValue)/100;
 btc_p_spect = ("btc_p_spect" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_side_mission_cycle = "btc_p_side_mission_cycle" call BIS_fnc_getParamValue;
-
-//<< Arsenal options >>
-btc_p_arsenal_Type = "btc_p_arsenal_Type" call BIS_fnc_getParamValue;
-btc_p_arsenal_Restrict = "btc_p_arsenal_Restrict" call BIS_fnc_getParamValue;
-btc_p_garage = ("btc_p_garage" call BIS_fnc_getParamValue) isEqualTo 1;
-btc_p_autoloadout = "btc_p_autoloadout" call BIS_fnc_getParamValue;
 
 //<< Other options >>
 btc_global_reputation = "btc_p_rep" call BIS_fnc_getParamValue;
@@ -587,7 +580,7 @@ btc_log_fnc_get_nottowable = {
         };
         case (_tower isKindOf "Car") : {
             ["Truck", "Truck_F", "Tank", "Plane", "Helicopter"]; //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        }; 
+        };
         default {
             ["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];
         };

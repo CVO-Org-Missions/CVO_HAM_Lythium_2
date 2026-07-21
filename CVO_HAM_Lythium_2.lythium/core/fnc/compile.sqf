@@ -291,8 +291,6 @@ btc_rep_fnc_hd = compileScript ["core\fnc\rep\hd.sqf"];
 btc_rep_fnc_suppressed = compileScript ["core\fnc\rep\suppressed.sqf"];
 btc_rep_fnc_foodRemoved = compileScript ["core\fnc\rep\foodRemoved.sqf"];
 
-//ARSENAL
-btc_arsenal_fnc_ammoUsage = compileScript ["core\fnc\arsenal\ammoUsage.sqf"];
 
 //TOW
 btc_tow_fnc_int = compileScript ["core\fnc\tow\int.sqf"];
@@ -415,14 +413,6 @@ if (!isDedicated) then {
     btc_spect_fnc_updateDevice = compileScript ["core\fnc\spect\updateDevice.sqf"];
     btc_spect_fnc_frequencies = compileScript ["core\fnc\spect\frequencies.sqf"];
     btc_spect_fnc_disableDevice = compileScript ["core\fnc\spect\disableDevice.sqf"];
-
-    //ARSENAL
-    btc_arsenal_fnc_data = compileScript ["core\fnc\arsenal\data.sqf"];
-    btc_arsenal_fnc_garage = compileScript ["core\fnc\arsenal\garage.sqf"];
-    btc_arsenal_fnc_loadout = compileScript ["core\fnc\arsenal\loadout.sqf"];
-    btc_arsenal_fnc_trait = compileScript ["core\fnc\arsenal\trait.sqf"];
-    btc_arsenal_fnc_ammoUsage = compileScript ["core\fnc\arsenal\ammoUsage.sqf"];
-    btc_arsenal_fnc_weaponsFilter = compileScript ["core\fnc\arsenal\weaponsfilter.sqf"];
 
     //TASK
     btc_task_fnc_setDescription = compileScript ["core\fnc\task\setDescription.sqf"];
